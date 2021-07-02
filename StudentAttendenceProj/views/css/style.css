@@ -1,0 +1,280 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.nav{
+    margin-left:10px;
+}
+.nav li a{
+font-size:16px;
+font-weight: bold;
+text-transform: uppercase;
+text-align: center;
+box-shadow:10px;
+margin-right:60px;
+color:orange;
+
+}
+
+.nav li a:hover{
+    color:blue;
+    background-color: paleturquoise;
+    border-radius: 10px;
+    
+}
+#main{
+    margin:0;
+    padding: 0;
+  
+}
+#main1{
+    background-color: orange;
+    transform:skewY(0deg,-10deg);
+}
+#main1 h1{
+    top:40%;
+    left:40%;
+    position: absolute;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   
+    color:blue;
+}
+
+footer{
+    margin-top: 20px;
+}
+footer h4{
+    padding: 15px;
+    font-size: 20px;
+    color:white;   
+}
+
+/*adminlogin css*/
+#admin{
+    margin-bottom: 80px;
+}
+
+#admin input[type=submit]{
+width:100%;
+font-size: 18px;
+color:black;
+font-weight: bold;
+margin-bottom: 12px;
+}
+
+#admin h1{
+    text-align: center;
+}
+
+#admin label{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#admin a{
+     font-size: 15px;
+    justify-content: center;
+}
+
+/*admindashboard css*/
+#course{
+    justify-content: center;
+    width: 400px;
+    height: 300px;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+#course label{
+   font-size: 25px;
+   font-weight: bold;
+   padding-top:20px;
+   
+}
+
+#course input[type=submit]{
+    width:400px ;
+    height: 40px;
+}
+#adminlist{
+    list-style-type:none;
+             background-color: rgb(36, 37, 42);
+             width:18%;
+             height:100%;
+             margin:0;
+             padding:0;
+             position:fixed;
+             overflow:auto;
+             top:62px;
+}
+#adminlist ul li{
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding: 15px 15px 15px 2px;
+    text-align:center ;
+}
+
+#adminlist ul li a{
+    display:block;
+    padding:10px 15px;
+    text-decoration: none;
+    text-align: center;
+    color:orange;
+    font-size: 18px;
+}
+#adminlist ul li:hover{
+ background-color: white;
+ color:black;
+}
+
+#admindashboard{
+    left: 10%;
+    margin: auto;
+    position: relative;
+}
+#admindashboard h1{
+    display:none;
+}
+
+#display th{
+  width:500px;
+  color:white;
+  
+}
+
+#display td{
+    
+    background-color: grey
+}
+
+/*Facultyregister*/
+
+#facultyreg{
+    left: 50%;
+    margin: auto;
+    width: 800px;
+}
+#facultyreg section h1{
+    margin-bottom: 20px;
+    text-align:center ;
+    color: rgb(52, 73, 94);
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    word-spacing: 10px;
+}
+#facultyreg form label{
+    font-size: 20px;
+}
+
+#facultyreg form input[type=submit]{
+width: 120px;
+font-size: 20px;
+}
+
+#facultyreg form input[type=reset]{
+    width: 120px;
+    font-size: 20px;
+    }
+
+/*Facultylogin*/
+
+#facultylog form a{
+text-align:center ;
+}
+
+/*Faculty Dashboard*/
+
+#add{
+    justify-content: center;
+    width: 400px;
+    height: 300px;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+#add label{
+   font-size: 25px;
+   font-weight: bold;
+   padding-top:20px;
+   
+}
+
+#add input[type=submit]{
+    width:200px ;
+    height: 40px;
+}
+#facultylist{
+    list-style-type:none;
+    background-color: rgb(36, 37, 42);
+    width:18%;
+    height:100%;
+    margin:0;
+    padding:0;
+    position:fixed;
+    overflow:auto;
+    top:62px;
+}
+#facultylist ul li{
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding: 15px 15px 15px 2px;
+    text-align:center ;
+}
+
+#facultylist ul li a{
+    display:block;
+    padding:10px 15px;
+    text-decoration: none;
+    text-align: center;
+    color:orange;
+    font-size: 18px;
+}
+
+#facultylist ul li:hover{
+    background-color: white;
+    color:black;
+}
+
+#facultycontainer{
+    left: 40%;
+    margin: auto;
+    position: relative;
+}
+
+/*Facultyregister*/
+
+#studreg{
+    left: 50%;
+    margin: auto;
+    width: 800px;
+}
+#studreg section h1{
+    margin-bottom: 20px;
+    text-align:center ;
+    color: rgb(52, 73, 94);
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    word-spacing: 10px;
+}
+#studreg form label{
+    font-size: 18px;
+}
+
+#studreg form input[type=submit]{
+width: 120px;
+font-size: 20px;
+}
+
+#studreg form input[type=reset]{
+    width: 120px;
+    font-size: 20px;
+    }
+
+#studreg #value{
+    border: none;
+    font-size: 22px;
+    font-weight: bold;
+    color:purple;
+}
+
+
+

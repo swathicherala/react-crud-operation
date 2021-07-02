@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>Prognoz Attendence Portal</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+    <link rel="stylesheet" href="css/style.css"></link>
+    </head>
+    <body>
+        <%- include('../partials/header.ejs') -%>
+        
+        <div class="row">
+            <div class="col-md-3" id="adminlist">
+                <div class="row" style="border-bottom: 2px solid black;">
+                    <div class="col-md-4">
+                        <img src="images/admin.png" style="width: 100%;height: 50px;">
+                    </div>
+                    <div class="col-md-8">
+                        <h3 style="color: white;font-weight: bold;">Admin</h4>
+                    </div>
+                </div>
+                <ul>
+                    <li><a href="" id="addcourse">Add Course</a></li>
+                    <li><a href="" id="faculty">Add Faculty</a></li>
+                    <li><a href="">Add Student</a></li>
+                    <li><a href="">Attendence record</a></li>
+                </ul>
+            </div>
+            <div class="col=md-9" id="admindashboard">
+                <div id="container">
+                    <div id="course">
+                        <form class="form-group" action="course" method="post">
+                            <label for="course">Add Course</label><br><br>
+                        <input type="text" class="form-control" name="cname"><br><br>
+                        <input type="submit" class="btn btn-warning">
+                        </form>
+                    </div>
+                    <div>
+                        <table class="table table-dark table-bordered" id="display">
+                            <thead>
+                                <tr>
+                                    <th>Course Id</th>
+                                    <th>Course Name</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% studs.forEach(function(studentdetails){
+                                  %>
+                                  <tr>
+                                      <td><%= studentdetails.cid%></td>
+                                      <td><%= studentdetails.course_name%></td>
+                                  </tr>
+                                <%});
+                                %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div  id="addfaculty">
+                    <h1>Add Faculty</h1>
+                </div>
+            </div>
+        </div>
+        <script>
+        $(document).ready(function(){
+            $("#faculty").click(function(){  
+        $("#container").hide();  
+    });  
+    });  
+        </script>
+    </body>
+    </html>

@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>Prognoz Attendence Portal</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+    <link rel="stylesheet" href="css/style.css"></link>
+    </head>
+    <body>
+        <%- include('../partials/header.ejs') -%>
+        <div class="row">
+            <div class="col-md-3" id="facultylist">
+                <div class="row" style="border-bottom: 2px solid black;">
+                    <div class="col-md-4">
+                        <img src="images/admin.png" style="width: 100%;height: 50px;">
+                    </div>
+                    <div class="col-md-8">
+                        <h3 style="color: white;font-weight: bold;">Faculty</h4>
+                    </div>
+                </div>
+                <ul>
+                    <li><a href="">Add Student</a></li>
+                    <li><a href="">Attendence</a></li>
+                    <li><a href="">Update Your Account</a></li>
+                    <li><a href="">Logout</a></li>
+                </ul>
+            </div>
+            <div class="col-md-10">
+                <div id="facultycontainer">
+                    <div id="add">
+                        <form action="" method="post">
+                        <div class="form-group">
+                            <label for="drop">Select Course:</label>
+                            <select name="drop" id="drop1" class="form-control">
+                              <option value="select course">Select Course</option>
+                                <% for (const i in dropdownVals) { %>
+                                    <option value="<%= dropdownVals[i].course_name %>"> <%= dropdownVals[i].course_name %> </option>
+                                <% } %>
+                             </select>
+                            </div>
+                            <!--Batch-->
+                            <div class="form-group">
+                                <label for="batch">Select Batch:</label>
+                                <select name="batch" id="drop2" class="form-control">
+                                    <option value="">Select Batch</option>
+                                    <option value="Batch1">Batch1</option>
+                                    <option value="Batch2">Batch2</option>
+                                    <option value="Batch3">Batch3</option>
+                                    <option value="Batch4">Batch4</option>
+                                </select>
+                            </div><br><br>
+                   <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="submit" name="add" id="btnQueryString" formaction="facultydashboard" class="btn btn-primary" value="Add Student">
+                            </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="submit" name="view" id="btnQueryString" formaction="viewdetails" class="btn btn-primary" value="View Students">
+                                </div>
+                              </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>
+        

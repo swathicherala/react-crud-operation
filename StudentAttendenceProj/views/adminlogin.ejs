@@ -1,0 +1,33 @@
+<html>
+    <head><title>Prognoz Attendence Portal</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+    <link rel="stylesheet" href="css/style.css"></link>
+</head>
+<body>
+    <%- include('../partials/header.ejs') -%>
+     <section>
+        <div id="admin" class="row justify-content-center">
+            <div class="col-xs-4" style="background-color: thistle;margin-top:50px;border-radius: 5px;">
+                <h1>Admin Login</h1><hr>
+             <form class="form-group" action="adminlogin" method="post">
+                 <label>Enter Username</label>
+             <input type="text" name="uname" class="form-control" required><br>
+             <label>Enter Password</label>
+             <input type="password" name="pass" class="form-control" required><br><br>
+             <input type="submit" class="btn btn-warning" value="Submit">
+             <a href="">Forgot Password?</a>
+             </form>
+             </div>
+             </div>
+            </section>
+     <!--Footer-->
+     <%- include('../partials/footer.ejs') -%>
+     <!--Footer end-->
+</body>
+</html>

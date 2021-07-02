@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>Prognoz Attendence Portal</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+    <link rel="stylesheet" href="css/style.css"></link>
+    </head>
+    <body>
+        <%- include('../partials/header.ejs') -%>
+        <div id="facultyreg">
+            <section>
+                <h1>Faculty Registeration Form</h1>
+                <form action="facultyregister" method="post">
+                      <div class="form-group">
+                        <label for="fname">Enter First Name:</label>
+                        <input type="text" class="form-control" name="fname" id="fname" placeholder="Enter Firstname" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="lname">Enter Last Name:</label>
+                        <input type="text" class="form-control" name="lname" id="lname" placeholder="Enter Lastname" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="email">Enter Email:</label>
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Enter Emailid" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="mobile">Enter Contact Number:</label>
+                        <input type="number" class="form-control" name="mobile" id="mobile" placeholder="Enter Contact Number" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="adress">Enter Address:</label>
+                        <textarea class="form-control" rows="5" cols="15" name="address" id="address"required>
+                        </textarea>
+                      </div>
+                      <div class="form-group">
+                        <label for="gender">Gender:</label>
+                        <input type="radio" name="gender" id="gender" value="Male" class="form-control-sm">Male&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="gender" id="gender" value="Female" class="form-control-sm">Female<br>
+                      </div>
+                      <div class="form-group">
+                        <label for="dob">Date Of Birth:</label>
+                        <input type="date" name="dob" id="dob" class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <label for="quali">Qualification:</label>
+                        <input type="text" name="quali" id="quali" class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <label for="quali">Select Course:</label>
+                        <select name="drop" class="form-control">
+                          <option value="select course">Select Course</option>
+                            <% for (const i in dropdownVals) { %>
+                                <option value="<%= dropdownVals[i].course_name %>"> <%= dropdownVals[i].course_name %> </option>
+                            <% } %>
+                         </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="uname">Enter Username:</label>
+                        <input type="text" class="form-control" name="uname" id="uname" placeholder="Enter Username" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="pass">Enter Password:</label>
+                        <input type="password" class="form-control" name="pass" id="pass" placeholder="Enter Password" required>
+                      </div>
+                    <input type="submit" value="Submit" class="btn btn-success">
+                    <input type="reset" value="Reset" class="btn btn-warning">
+                </form>
+            </section>
+        </div>
+        
+        <!--Footer-->
+        <%- include('../partials/footer.ejs') -%>
+        <!--Footer end-->
+    </body>
+    </html>
+        
